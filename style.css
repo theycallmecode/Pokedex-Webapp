@@ -112,6 +112,10 @@ h1 {
   }
 }
 
+.types {
+  display: flex;
+}
+
 .front,
 .back {
   backface-visibility: hidden;
@@ -134,7 +138,6 @@ h1 {
   opacity: 0.4;
   animation: rotate 5s linear infinite;
 }
-
 .side {
   width: 80%;
   display: flex;
@@ -142,11 +145,9 @@ h1 {
   justify-content: space-between !important;
   align-items: center;
 }
-
 .image-container {
   position: relative;
 }
-
 .image {
   width: 150px;
   top: 10px;
@@ -155,7 +156,6 @@ h1 {
   z-index: 10;
   image-rendering: pixelated;
 }
-
 .background {
   width: 150px;
   position: absolute;
@@ -163,7 +163,6 @@ h1 {
   opacity: 0.4;
   animation: rotate 5s linear infinite;
 }
-
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -172,7 +171,6 @@ h1 {
     transform: rotate(360deg);
   }
 }
-
 .number {
   background-color: rgba(0, 0, 0, 0.1);
   padding: 10px 10px;
@@ -181,7 +179,6 @@ h1 {
   font-size: 1em;
   font-family: moltors, sans-serif;
 }
-
 .name {
   padding: 10px;
   letter-spacing: 5px;
@@ -190,7 +187,6 @@ h1 {
   white-space: nowrap;
   text-overflow: clip;
 }
-
 .stats {
   display: flex;
   justify-content: space-evenly;
@@ -211,6 +207,13 @@ h1 {
   -ms-overflow-style: none;
   scrollbar-width: none;
   scroll-behavior: smooth;
+}
+
+.nav.github,
+a:hover {
+  color: #310d15;
+  transform: scale(1.2);
+  transition: color 0.2s, transform 0.2s;
 }
 
 .header {
@@ -248,13 +251,6 @@ a {
   width: 10%;
 }
 
-.nav.github,
-a:hover {
-  color: #310d15;
-  transform: scale(1.2);
-  transition: color 0.2s, transform 0.2s;
-}
-
 #scrollToTopBtn {
   width: 40px;
   height: 40px;
@@ -270,7 +266,6 @@ a:hover {
   cursor: pointer;
   border-radius: 50%;
 }
-
 #scrollToDownBtn {
   width: 40px;
   height: 40px;
@@ -294,14 +289,13 @@ a:hover {
     rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   border: 2px solid rgb(32, 32, 32);
 }
-
 ::placeholder {
   font-weight: 400;
   color: #121212;
 }
-
 #searchbar:hover {
   color: rgb(28, 28, 18);
+
   background-color: #f1eeee;
 }
 
@@ -325,4 +319,320 @@ a:hover {
 
 .box input:focus {
   border: 2px solid #202020;
+}
+
+.poke__type__bg > img {
+  width: 20px;
+  height: 20px;
+  transition: all 0.3s ease; /* Add a smooth transition effect */
+}
+
+.poke__type__bg:hover > img {
+  transform: scale(1.2); /* Enlarge the type on hover */
+}
+
+.poke__type__bg {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  margin: 0px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.grass {
+  background: var(--grass);
+  box-shadow: 0 0 20px var(--grass);
+}
+
+.bug {
+  background: var(--bug);
+  box-shadow: 0 0 20px var(--bug);
+}
+
+.dark {
+  background: var(--dark);
+  box-shadow: 0 0 20px var(--dark);
+}
+
+.dragon {
+  background: var(--dragon);
+  box-shadow: 0 0 20px var(--dragon);
+}
+
+.electric {
+  background: var(--electric);
+  box-shadow: 0 0 20px #796d26;
+}
+
+.fairy {
+  background: var(--fairy);
+  box-shadow: 0 0 20px var(--fairy);
+}
+
+.fighting {
+  background: var(--fighting);
+  box-shadow: 0 0 20px var(--fighting);
+}
+
+.flying {
+  background: var(--flying);
+  box-shadow: 0 0 20px var(--flying);
+}
+
+.ghost {
+  background: var(--ghost);
+  box-shadow: 0 0 20px var(--ghost);
+}
+
+.ground {
+  background: var(--ground);
+  box-shadow: 0 0 20px var(--ground);
+}
+
+.ice {
+  background: var(--ice);
+  box-shadow: 0 0 20px var(--ice);
+}
+
+.normal {
+  background: var(--normal);
+  box-shadow: 0 0 20px var(--normal);
+}
+
+.poison {
+  background: var(--poison);
+  box-shadow: 0 0 20px var(--poison);
+}
+
+.psychic {
+  background: var(--psychic);
+  box-shadow: 0 0 20px var(--psychic);
+}
+
+.rock {
+  background: var(--rock);
+  box-shadow: 0 0 20px var(--rock);
+}
+
+.steel {
+  background: var(--steel);
+  box-shadow: 0 0 20px var(--steel);
+}
+
+.water {
+  background: var(--water);
+  box-shadow: 0 0 20px var(--water);
+}
+
+.fire {
+  background: var(--fire);
+  box-shadow: 0 0 20px var(--fire);
+}
+
+.select-wrapper {
+  overflow: hidden;
+  max-width: 95%;
+  width: max-content;
+  margin: auto;
+  margin-bottom: 20px;
+  font-family: "slumbersWeight", sans-serif;
+  font-size: 1.5em;
+  font-style: italic;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+}
+
+#regionSelect {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+#regionSelect::-webkit-scrollbar {
+  display: none;
+}
+#regionSelect::-moz-scrollbar {
+  display: none;
+}
+
+#regionSelect span {
+  background-color: rgba(46, 46, 46, 0.1);
+
+  padding: 5px 15px;
+  border-radius: 10px;
+
+  border: 2px solid #202020;
+  outline: none;
+  cursor: pointer;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+#regionSelect span:hover {
+  background-color: #bbbbbb;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.25s ease-in-out;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(46, 46, 46, 0.1);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #202020;
+  border-radius: 10px;
+}
+
+.active {
+  background-color: black !important;
+  color: white !important;
+}
+
+.lds-ring {
+  margin-top: 30vh;
+  display: none;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin-inline: auto;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: cornflowerblue transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.ring-active {
+  display: block;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#dark:hover {
+  cursor: pointer;
+}
+
+.darkmode-container {
+  margin-right: 2.5em;
+}
+
+.darkmode-content {
+  position: relative;
+  left: 15%;
+  z-index: 999;
+  font-size: 1.5em;
+  font-family: pocketMonk;
+  display: flex;
+}
+
+.darkmode-text {
+  margin-right: 0.3em;
+}
+
+.github {
+  min-height: 2rem;
+  min-width: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+.dark-mode .header {
+  background-color: #222;
+  color: #fff;
+}
+.dark-mode .darkmode-button-icon {
+  color: #fff;
+}
+
+.dark-mode .github-icon {
+  color: #fff;
+}
+
+.dark-mode .box input {
+  background-color: #787878;
+  color: #ab0101;
+}
+
+.dark-mode #regionSelect span {
+  border: 1px solid #ccc;
+}
+relative .dark-mode #regionSelect span:hover {
+  color: black;
+  background-color: #ead51d;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.25s ease-in-out;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 924px) {
+  .header {
+    height: 6em;
+    padding-top: 35px;
+  }
+  .logo {
+    position: absolute;
+    left: 10px;
+  }
+
+  .features {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    top: 0;
+    width: 100%;
+    height: 25px;
+  }
+
+  .darkmode-content {
+    left: 0;
+  }
 }

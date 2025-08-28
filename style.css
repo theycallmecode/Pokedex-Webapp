@@ -63,3 +63,25 @@ h1 {
   margin: 0 auto;
   max-width: 1200px;
 }
+
+.cardContainer {
+  margin: 10px;
+}
+
+.card {
+  background-color: #eee;
+  border-radius: 10px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  align-items: center;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: 0.25s ease-in;
+  max-width: 210px;
+  min-width: 210px;
+  min-height: 330px;
+  max-height: 330px;
+  color: #202020;
+  perspective: 150rem;
+  position: relative;
+}

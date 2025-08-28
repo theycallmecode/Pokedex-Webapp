@@ -21,3 +21,46 @@ const colors = {
   steel: "#808080",
   ice: "#98D8D8",
 };
+
+const regions = {
+  kanto: {
+    start: 1,
+    end: 151,
+  },
+  johto: {
+    start: 152,
+    end: 251,
+  },
+  hoenn: {
+    start: 252,
+    end: 386,
+  },
+  sinnoh: {
+    start: 387,
+    end: 493,
+  },
+  unova: {
+    start: 494,
+    end: 649,
+  },
+  kalos: {
+    start: 650,
+    end: 721,
+  },
+  alola: {
+    start: 722,
+    end: 809,
+  },
+  galar: {
+    start: 810,
+    end: 898,
+  },
+  hisui: {
+    start: 899,
+    end: 905,
+  },
+  paldea: {
+    start: 906,
+    end: 1010,
+  },
+};

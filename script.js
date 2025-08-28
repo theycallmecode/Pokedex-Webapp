@@ -84,7 +84,6 @@ const fetchPokemons = async (region) => {
 
 const main_types = Object.keys(colors);
 
-
 const createPokemonCard = (pokemon) => {
 
     const pokemonEl = document.createElement("div");
@@ -99,20 +98,6 @@ const createPokemonCard = (pokemon) => {
     }
     const id = pokemon.id.toString().padStart(3, "0");
 
-    // start edit -----------------------
-
-    const moves = [];
-    try {
-        for (let i = 0; i <= 1; i++) {
-            moves.push(pokemon.moves[i].move.name);
-        }
-        console.log(moves);
-    } catch (error) {
-        console.log(error);
-    }
-
-    // end edit ------------------------
-
     let weight = pokemon.weight / 10 + "kg";
     let height = pokemon.height / 10 + "m";
 
@@ -121,7 +106,6 @@ const createPokemonCard = (pokemon) => {
     const color = colors[type];
     let frontImg;
     let backImg;
-
     try {
         frontImg = pokemon.sprites.front_default;
         backImg = pokemon.sprites.back_default;
@@ -167,15 +151,6 @@ const createPokemonCard = (pokemon) => {
     </div>
   `;
 
-
-    // start edit -----------------------
-
-    <div class="moves">
-        <div>${moves[0]}</div>
-        <div>${moves[1]}</div>
-    </div>
-
-    // end edit ------------------------
 
     pokemonEl.innerHTML = pokemonInnerHTML;
     // Add event listener to open new page on card click
@@ -245,7 +220,8 @@ document
 function search_pokemon() {
     let input = document.getElementById("searchbar").value;
     input = input.toLowerCase();
-    input = input.replace(/\s+/g, "");
+    input = input.replace(/\s+/g, ""); // removing all spaces from search box
+    // storing all card along wiith details in variable
     let x = document.getElementsByClassName("cardContainer");
 
     for (i = 0; i < x.length; i++) {
@@ -260,7 +236,8 @@ function search_pokemon() {
     }
 }
 
-// dark mode
+
+// dark mode enabled
 const darkModeButton = document.getElementById("dark");
 
 darkModeButton.addEventListener("click", () => {
@@ -283,5 +260,6 @@ darkModeButton.addEventListener("click", () => {
     darkModeIcon.classList.toggle("fa-toggle-on");
     // You can add additional elements that need dark mode here
 });
+
 
 changeRegion();

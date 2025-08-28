@@ -99,3 +99,15 @@ h1 {
   transition: 0.25s ease-in-out;
   transition-delay: 0.2s;
 }
+
+/* Handle card flip behavior on touch-screen */
+@media (hover: none) {
+  .cardContainer:hover .card {
+    transform: none;
+    transition: none;
+  }
+
+  .back {
+    visibility: hidden;
+  }
+}

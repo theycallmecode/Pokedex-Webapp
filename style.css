@@ -92,3 +92,10 @@ h1 {
     max-width: 45vw !important;
   }
 }
+
+.cardContainer:hover .card {
+  transform: rotateY(180deg);
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
+  transition-delay: 0.2s;
+}

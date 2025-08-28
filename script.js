@@ -83,3 +83,5 @@ const fetchPokemons = async (region) => {
         }, "150");
     }
 };
+
+const main_types = Object.keys(colors);

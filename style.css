@@ -212,3 +212,31 @@ h1 {
   scrollbar-width: none;
   scroll-behavior: smooth;
 }
+
+.header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 5em;
+  width: 100%;
+  margin-bottom: 20px;
+  z-index: 100;
+  background-color: #e0e0e0;
+}
+
+.header .logo img {
+  border-radius: 50%;
+  width: 50px;
+  cursor: pointer;
+}
+
+.logo {
+  display: inline-block;
+  transition: transform 0.6s;
+}
+
+.logo:hover {
+  transform: rotate(360deg);
+}

@@ -202,3 +202,13 @@ h1 {
   font-style: italic;
   letter-spacing: 2px;
 }
+
+.select-wrapper .regions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}

@@ -99,3 +99,12 @@ const main_types = Object.keys(colors);
       }
 
   // end edit
+
+    let weight = pokemon.weight / 10 + "kg";
+  let height = pokemon.height / 10 + "m";
+
+  const poke_types = pokemon.types.map((type) => type.type.name);
+  const type = main_types.find((type) => poke_types.indexOf(type) > -1);
+  const color = colors[type];
+  let frontImg;
+  let backImg;

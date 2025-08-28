@@ -111,3 +111,17 @@ h1 {
     visibility: hidden;
   }
 }
+
+.front,
+.back {
+  backface-visibility: hidden;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+}
+
+.back {
+  transform: rotateY(-180deg);
+}

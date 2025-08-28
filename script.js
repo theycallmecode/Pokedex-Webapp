@@ -99,7 +99,7 @@ const createPokemonCard = (pokemon) => {
     }
     const id = pokemon.id.toString().padStart(3, "0");
 
-    // start edit
+    // start edit -----------------------
 
     const moves = [];
     try {
@@ -111,7 +111,7 @@ const createPokemonCard = (pokemon) => {
         console.log(error);
     }
 
-    // end edit
+    // end edit ------------------------
 
     let weight = pokemon.weight / 10 + "kg";
     let height = pokemon.height / 10 + "m";
@@ -168,14 +168,14 @@ const createPokemonCard = (pokemon) => {
   `;
 
 
-    // start edit
+    // start edit -----------------------
 
     <div class="moves">
         <div>${moves[0]}</div>
         <div>${moves[1]}</div>
     </div>
 
-    // end edit
+    // end edit ------------------------
 
     pokemonEl.innerHTML = pokemonInnerHTML;
     // Add event listener to open new page on card click
@@ -259,3 +259,20 @@ function search_pokemon() {
         }
     }
 }
+
+// dark mode enabled
+const darkModeButton = document.getElementById("dark");
+
+darkModeButton.addEventListener("click", () => {
+
+    let element = document.body;
+    element.classList.toggle("dark-mode");
+    document.body.classList.toggle("dark-mode");
+
+    const regions = document.querySelectorAll(".regionvalue");
+    console.log(regions);
+    regions.forEach(region => {
+        region.classList.toggle("dark-mode");
+    });
+
+});

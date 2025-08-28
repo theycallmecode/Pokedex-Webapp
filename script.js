@@ -85,3 +85,17 @@ const fetchPokemons = async (region) => {
 };
 
 const main_types = Object.keys(colors);
+
+  // start edit
+
+     const moves = [];
+     try {
+      for (let i = 0; i <= 1 ; i++) {
+              moves.push(pokemon.moves[i].move.name);
+      }
+      console.log(moves);
+      } catch (error) {
+          console.log(error);
+      }
+
+  // end edit

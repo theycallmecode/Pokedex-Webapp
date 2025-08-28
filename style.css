@@ -85,3 +85,10 @@ h1 {
   perspective: 150rem;
   position: relative;
 }
+
+@media screen and (max-width: 600px) {
+  .card {
+    min-width: 45vw !important;
+    max-width: 45vw !important;
+  }
+}
